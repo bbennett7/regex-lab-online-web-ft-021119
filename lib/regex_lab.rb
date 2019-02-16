@@ -8,11 +8,8 @@ def starts_with_a_vowel?(word)
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
-  un_ing_array = []
-  text.each do |word|
-    if word.match(/\bun/)
-      un_ing_array << word
-    end
+  text.scan(/\bun/)
+
   end
   un_ing_array
 end
