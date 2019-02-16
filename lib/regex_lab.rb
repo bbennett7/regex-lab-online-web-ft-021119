@@ -8,9 +8,13 @@ def starts_with_a_vowel?(word)
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
-  text.collect do |word|
-    word.match(/\bun/)
+  un_ing_array = []
+  text.each do |word|
+    if word.match(/\bun/)
+      un_ing_array << word
+    end
   end
+  un_ing_array
 end
 
 def words_five_letters_long(text)
